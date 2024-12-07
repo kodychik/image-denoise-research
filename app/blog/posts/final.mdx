@@ -11,13 +11,9 @@ import Image from "next/image";
 > **Published:** 2024-12-06  
 > **Summary:** This report dives into the implementation and evaluation of FFDNet for image denoising tasks, including results from training and testing on the SSID dataset.
 
----
-
 ## 🔍 Introduction
 
 Image denoising is a critical problem in computer vision. It aims to remove noise while preserving details, improving image quality for downstream tasks like object detection or medical imaging.
-
----
 
 ## 🚀 Objective
 
@@ -26,8 +22,6 @@ The primary goal of this project was to:
 - Explore **FFDNet**, a convolutional neural network-based approach to denoising.
 - Train and test the model on the **SSID Dataset**.
 - Analyze and compare performance using **Peak Signal-to-Noise Ratio (PSNR)**.
-
----
 
 ## 🧠 What is FFDNet?
 
@@ -42,16 +36,12 @@ FFDNet is a deep learning-based image denoising model that introduces a flexible
   - Convolution layers with ReLU activation and batch normalization.
   - Final upscaling to restore the image.
 
----
-
 <Image
   src="ffdnet.png"
   alt="Illustration of FFDNet architecture"
   width={800}
   height={400}
 />
-
----
 
 ## 🔬 Research Insights: "Deep Learning Revolution and Beyond"
 
@@ -66,8 +56,6 @@ FFDNet is a deep learning-based image denoising model that introduces a flexible
 
 This paper provided the theoretical foundation for implementing and testing FFDNet.
 
----
-
 ## 📊 Experiment Details
 
 ### Dataset:
@@ -78,8 +66,6 @@ This paper provided the theoretical foundation for implementing and testing FFDN
 
 Training on macOS was limited due to the lack of **CUDA** support. Instead, pre-trained models were tested and evaluated.
 
----
-
 ## ⚙️ Model Configuration
 
 ### Architecture Highlights:
@@ -88,8 +74,6 @@ Training on macOS was limited due to the lack of **CUDA** support. Instead, pre-
 - **Convolution Layers**: 3×3 filters, stride 1, and padding to maintain spatial dimensions.
 - **Max-Pooling**: 2×2 pixel windows with a stride of 2.
 - **Fully Connected Layers**: Three layers, with 1000 output channels for classification.
-
----
 
 ## 📈 Results and Analysis
 
@@ -114,8 +98,6 @@ Training on macOS was limited due to the lack of **CUDA** support. Instead, pre-
 - FFDNet effectively preserved details in moderately noisy images.
 - Performance degrades slightly for images with extremely high noise.
 
----
-
 ## 🌟 Conclusion
 
 FFDNet represents a significant advancement in image denoising, balancing flexibility and efficiency. While traditional methods like BM3D are still valuable, deep learning approaches offer adaptability to various noise conditions.
@@ -125,15 +107,11 @@ FFDNet represents a significant advancement in image denoising, balancing flexib
 - Dependence on accurate noise maps.
 - Limited receptive field compared to fully dilated networks.
 
----
-
 ## 📚 Future Work
 
 - Explore **multi-scale CNNs** for denoising.
 - Test FFDNet on other datasets, such as **DIV2K** or **BSD300**.
 - Investigate hybrid models combining traditional and deep learning methods.
-
----
 
 <Image
   src="multicnn.png"
@@ -142,13 +120,9 @@ FFDNet represents a significant advancement in image denoising, balancing flexib
   height={400}
 />
 
----
-
 ## 🛠️ Code and Reproducibility
 
 - Code repository: [GitHub Link Placeholder](#)
 - Pre-trained models and test scripts available for reproducibility.
-
----
 
 <Image src="cheers.png" alt="Exciting closing image" width={800} height={400} />
