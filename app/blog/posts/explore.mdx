@@ -1,0 +1,38 @@
+---
+title: "Exploring of Image Restoration and Denoising"
+publishedAt: "2024-10-20"
+summary: "In weeks 6–8, I delved into image restoration, focusing on denoising techniques."
+---
+
+## Deep Learning Revolution and Beyond
+
+I studied the seminal paper, Deep Learning Revolution and Beyond by Michael Elad, Bahjat Kawar, and Gregory Vaksman. The paper discusses how deep learning has transformed image restoration tasks, traditionally dominated by methods like BM3D.
+
+## Transition from Traditional to Deep Learning
+
+Traditional methods like BM3D rely on hand-crafted features and algorithms tailored to specific noise models.
+Deep learning models, such as CNNs, offer data-driven approaches that learn directly from noisy and clean image pairs.
+
+## Introduction of Neural Networks for Restoration
+
+The paper highlights architectures like FFDNet, which handle spatially variant noise using a noise-level map input, outperforming traditional methods in speed and flexibility.
+
+## U-Net vs FFDNet
+
+I investigated the differences between U-Net and FFDNet, focusing on how these architectures handle image denoising tasks.
+
+For U-Net:
+Encoder-decoder structure captures high-level context while maintaining spatial details through skip connections.
+Effective for segmentation and restoration tasks where spatial context is crucial.
+However, repeated downsampling creates a bottleneck that sacrifices spatial precision, which can be problematic for fine-detail restoration.
+
+For FFDNet:
+Maintains consistent spatial dimensions by avoiding progressive downsampling.
+Integrates noise-level maps as an input to handle varying noise intensities.
+However, relies on accurate noise-level maps and has a smaller receptive field compared to fully dilated networks.
+
+Overall, FFDNet was better suited for real-world denoising tasks requiring flexibility and speed, while U-Net excelled in contexts requiring high-level context preservation.
+
+## My Experimentation
+
+I tested the BM3D algorithm on a dataset of noisy images, achieving PSNR values of over 30dB, indicating high-quality restoration.
