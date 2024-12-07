@@ -1,7 +1,7 @@
 import { BlogPosts } from 'app/components/posts'
 
 export const metadata = {
-  title: 'Findings',
+  title: 'findings',
   description: 'My Findings on state of the art image denoising techniques.',
 }
 
