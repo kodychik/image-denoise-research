@@ -1,0 +1,159 @@
+---
+title: "Deep Learning-Based Image Denoising Using FFDNet"
+publishedAt: "2024-12-01"
+summary: "Exploring the potential of FFDNet for image denoising through hands-on training and testing."
+---
+
+import Image from "next/image";
+
+# Deep Learning-Based Image Denoising Using FFDNet
+
+> **Published:** 2024-12-06  
+> **Summary:** This report dives into the implementation and evaluation of FFDNet for image denoising tasks, including results from training and testing on the SSID dataset.
+
+---
+
+## 🔍 Introduction
+
+Image denoising is a critical problem in computer vision. It aims to remove noise while preserving details, improving image quality for downstream tasks like object detection or medical imaging.
+
+---
+
+## 🚀 Objective
+
+The primary goal of this project was to:
+
+- Explore **FFDNet**, a convolutional neural network-based approach to denoising.
+- Train and test the model on the **SSID Dataset**.
+- Analyze and compare performance using **Peak Signal-to-Noise Ratio (PSNR)**.
+
+---
+
+## 🧠 What is FFDNet?
+
+FFDNet is a deep learning-based image denoising model that introduces a flexible architecture capable of handling varying noise levels.
+
+### Key Features of FFDNet:
+
+- **Noise Map Input**: Dynamically adjusts denoising strength based on input noise levels.
+- **Efficiency**: Faster inference compared to traditional denoising techniques like BM3D.
+- **Architecture**:
+  - Initial downsampling to reduce spatial dimensions.
+  - Convolution layers with ReLU activation and batch normalization.
+  - Final upscaling to restore the image.
+
+---
+
+<Image
+  src="/ffdnet.png"
+  alt="Illustration of FFDNet architecture"
+  width={800}
+  height={400}
+/>
+
+---
+
+## 🔬 Research Insights: "Deep Learning Revolution and Beyond"
+
+### Summary of the Paper:
+
+- **Authors**: Michael Elad, Bahjat Kawar, and Gregory Vaksman.
+- **Objective**: Explores the evolution of deep learning for image denoising.
+- **Key Findings**:
+  1. Traditional methods like BM3D provide excellent results but lack adaptability.
+  2. Deep learning models, such as FFDNet and U-Net, offer flexibility and scalability.
+  3. Noise level maps are critical for handling spatially varying noise.
+
+This paper provided the theoretical foundation for implementing and testing FFDNet.
+
+---
+
+## 📊 Experiment Details
+
+### Dataset:
+
+- **SSID Dataset**: Contains images with varying noise levels, simulating real-world conditions.
+
+### Environment Challenges:
+
+Training on macOS was limited due to the lack of **CUDA** support. Instead, pre-trained models were tested and evaluated.
+
+---
+
+## ⚙️ Model Configuration
+
+### Architecture Highlights:
+
+- **Preprocessing**: Input normalization by subtracting mean RGB values.
+- **Convolution Layers**: 3×3 filters, stride 1, and padding to maintain spatial dimensions.
+- **Max-Pooling**: 2×2 pixel windows with a stride of 2.
+- **Fully Connected Layers**: Three layers, with 1000 output channels for classification.
+
+---
+
+## 📈 Results and Analysis
+
+### Test Results (PSNR in dB):
+
+| Image     | PSNR  |
+| --------- | ----- |
+| `test_14` | 27.15 |
+| `test_28` | 28.02 |
+| `test_29` | 31.67 |
+| `test_15` | 26.46 |
+| `test_9`  | 30.70 |
+
+...
+...
+...
+| **Average** | **28.91** |
+
+### Key Observations:
+
+- Images with higher noise levels achieved **lower PSNR** values.
+- FFDNet effectively preserved details in moderately noisy images.
+- Performance degrades slightly for images with extremely high noise.
+
+---
+
+## 🌟 Conclusion
+
+FFDNet represents a significant advancement in image denoising, balancing flexibility and efficiency. While traditional methods like BM3D are still valuable, deep learning approaches offer adaptability to various noise conditions.
+
+### Limitations:
+
+- Dependence on accurate noise maps.
+- Limited receptive field compared to fully dilated networks.
+
+---
+
+## 📚 Future Work
+
+- Explore **multi-scale CNNs** for denoising.
+- Test FFDNet on other datasets, such as **DIV2K** or **BSD300**.
+- Investigate hybrid models combining traditional and deep learning methods.
+
+---
+
+<Image
+  src="/multicnn.png"
+  alt="Illustration of future directions in image denoising"
+  width={800}
+  height={400}
+/>
+
+---
+
+## 🛠️ Code and Reproducibility
+
+- Code repository: [GitHub Link Placeholder](#)
+- Pre-trained models and test scripts available for reproducibility.
+
+---
+
+<Image
+  src="/cheers.png"
+  alt="Exciting closing image"
+  width={800}
+  height={400}
+/>
