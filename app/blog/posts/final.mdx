@@ -4,8 +4,6 @@ publishedAt: "2024-12-01"
 summary: "Exploring the potential of FFDNet for image denoising through hands-on training and testing."
 ---
 
-import Image from "next/image";
-
 # Deep Learning-Based Image Denoising Using FFDNet
 
 > **Published:** 2024-12-06  
@@ -35,13 +33,6 @@ FFDNet is a deep learning-based image denoising model that introduces a flexible
   - Initial downsampling to reduce spatial dimensions.
   - Convolution layers with ReLU activation and batch normalization.
   - Final upscaling to restore the image.
-
-<Image
-  src="ffdnet.png"
-  alt="Illustration of FFDNet architecture"
-  width={800}
-  height={400}
-/>
 
 ## 🔬 Research Insights: "Deep Learning Revolution and Beyond"
 
@@ -79,18 +70,17 @@ Training on macOS was limited due to the lack of **CUDA** support. Instead, pre-
 
 ### Test Results (PSNR in dB):
 
-| Image     | PSNR  |
-| --------- | ----- |
-| `test_14` | 27.15 |
-| `test_28` | 28.02 |
-| `test_29` | 31.67 |
-| `test_15` | 26.46 |
-| `test_9`  | 30.70 |
+| **Image**   | **PSNR (dB)** |
+| ----------- | ------------- |
+| `test_14`   | **27.15**     |
+| `test_28`   | **28.02**     |
+| `test_29`   | **31.67**     |
+| `test_15`   | **26.46**     |
+| `test_9`    | **30.70**     |
+| **...**     | **...**       |
+| **Average** | **28.91**     |
 
-...
-...
-...
-| **Average** | **28.91** |
+A very good score of 28.91 dB for the Peak Signal to Noise Ratio.
 
 ### Key Observations:
 
@@ -112,17 +102,3 @@ FFDNet represents a significant advancement in image denoising, balancing flexib
 - Explore **multi-scale CNNs** for denoising.
 - Test FFDNet on other datasets, such as **DIV2K** or **BSD300**.
 - Investigate hybrid models combining traditional and deep learning methods.
-
-<Image
-  src="multicnn.png"
-  alt="Illustration of future directions in image denoising"
-  width={800}
-  height={400}
-/>
-
-## 🛠️ Code and Reproducibility
-
-- Code repository: [GitHub Link Placeholder](#)
-- Pre-trained models and test scripts available for reproducibility.
-
-<Image src="cheers.png" alt="Exciting closing image" width={800} height={400} />
